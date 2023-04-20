@@ -11,6 +11,8 @@ import Curriculum from "./components/Curriculum";
 import Description from "./components/Description";
 import Inner from "./components/Inner";
 
+
+/*  portafolio-rosiello.netlify.app   es la URL*/
 function App() {
 
   const [cv, setCV] = useState(true);

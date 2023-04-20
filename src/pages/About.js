@@ -9,8 +9,7 @@ export default function About() {
   };
 
   return (
-    <Carousel slide={true} activeIndex={index} onSelect={handleSelect}>
-
+    <Carousel interval={null} bsPrefix="carousel" slide={true} activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <div className="card-carousel">
           <Carousel.Caption className="text carousel-captio">
@@ -27,7 +26,7 @@ export default function About() {
       <Carousel.Item>
         <div className="card-carousel">
           <Carousel.Caption className="text carousel-captio">
-            <h3>Habilidades blandas</h3>
+            <h3>Habilidades blandas:</h3>
             <p>Me considero persistente durante momentos de dificultades y desafios.</p>
             <p>Grandes motivaciones para el aprendizaje y desarrollo profesional,</p>
             <p>buena predisposicion para trabajar en conjunto, entendiendo que estar abierto</p>
@@ -40,7 +39,7 @@ export default function About() {
       <Carousel.Item>
         <div className="card-carousel">
           <Carousel.Caption className="text carousel-captio">
-            <h3>Conocimientos</h3>
+            <h3>Conocimientos:</h3>
             <p>En la carrera he aprendido el paradigma de Programacion Orientada a Ojetos,</p>
             <p>utilizando lenguajes como Java, Javascript y PHP. Tambien nociones basicas de</p>
             <p>bases de datos como consultas SQL y algo de Backend con la arquitectura MVC con PHP. </p>
@@ -49,7 +48,6 @@ export default function About() {
           </Carousel.Caption>
         </div>
       </Carousel.Item>
-
     </Carousel>
   );
 }

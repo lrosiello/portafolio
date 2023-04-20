@@ -22,7 +22,7 @@ export default function Description() {
       <div className="title">
       <h1>Software Developer</h1>
       </div>
-      <h2>Knowledges: </h2>
+      <h2 className="knowledges-container">Knowledges: </h2>
           {knowledges.map((element) => (
             <div key={element.id}>
               <ul>
