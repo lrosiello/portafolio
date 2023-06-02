@@ -5,6 +5,9 @@ import imgJS from "../assets/image-js.svg";
 import imgPHP from "../assets/image-php.svg";
 import imgPostgreSQL from "../assets/image-postgreSQL.svg";
 import imgReact from "../assets/image-react.svg";
+import imgMui from "../assets/image-mui.svg";
+import imgNode from "../assets/image-node.svg";
+import imgNext from "../assets/image-next.svg";
 
 
 export default function Description() {
@@ -14,6 +17,9 @@ export default function Description() {
     { name: "Java", img: imgJava , id:3},
     { name: "PHP", img: imgPHP , id:4},
     { name: "PostgreSQL", img: imgPostgreSQL,  id:5},
+    { name: "MaterialUI", img: imgMui, id:6},
+    { name: "Node.js", img: imgNode, id:7},
+    { name: "Next.js", img: imgNext, id:8},
   ];
 
 
@@ -29,10 +35,12 @@ export default function Description() {
             <React.Fragment>
               <li className="lista1"   >
               <Figure className="itemLista" >
-                <Figure.Image width={30} height={30} src={element.img}  />
+              <div className="custom-paper">
+                <Figure.Image width={30} height={30}  src={element.img}  />
                 <Figure.Caption>
-                  <h4>{element.name}</h4>
+                  <h6>{element.name}</h6>
                 </Figure.Caption>
+              </div>
               </Figure>
               </li>
             </React.Fragment>

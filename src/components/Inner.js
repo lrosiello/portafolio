@@ -6,15 +6,15 @@ import About from "../pages/About.js";
 import Repositories from "../pages/Repositories";
 import Contact from "../pages/Contact";
 
-export default function Inner() {
+export default function Inner(props) {
 
     
   return (
     <Routes>
     <Route path="/" element={<root />}></Route>
-    <Route path="/about" element={<About />}></Route>
-    <Route path="/repositories" element={<Repositories />}></Route>
-    <Route path="/contact" element={<Contact />}></Route>
+    <Route path="/about" element={<About language={props.language}/>}></Route>
+    <Route path="/repositories" element={<Repositories language={props.language}/>}></Route>
+    <Route path="/contact" element={<Contact language={props.language}/>}></Route>
   </Routes>
 
   );

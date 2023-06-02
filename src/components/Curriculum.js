@@ -1,17 +1,43 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import cv from "../Download/curriculum-Rosiello.pdf";
 
-export default function Curriculum() {
+export default function Curriculum(props) {
+  let cv = null;
 
-    
+  if (props.language === "spanish") {
+    cv = require("../Download/curriculum-rosiello-spa.pdf");
+    console.log(cv);
+  } else if (props.language === "english") {
+    cv = require("../Download/curriculum-rosiello-eng.pdf");
+  }
+
   return (
     <div className="descarga">
       <div className="d-grid gap-2">
         <Button variant="primary" size="lg">
-          <a href={cv}  target="_blank" className="textoBoton" rel="noreferrer">
-             Abrir Curriculum Vitae
-          </a>
+          {props.language === "spanish" ? (
+            <>
+              <a
+                href={cv}
+                target="_blank"
+                className="textoBoton"
+                rel="noreferrer"
+              >
+                Abrir Curriculum Vitae
+              </a>
+            </>
+          ) : props.language === "english" ? (
+            <a
+              href={cv}
+              target="_blank"
+              className="textoBoton"
+              rel="noreferrer"
+            >
+              Open Curriculum Vitae
+            </a>
+          ) : (
+            <></>
+          )}
         </Button>
       </div>
     </div>

@@ -1,89 +1,141 @@
-body{
-  background-color:rgb(221, 246, 246);
-}
 
 :root {
   --primary: rgb(149, 97, 197);
   --secondary: rgb(223, 225, 239);
+  --background: rgb(27, 33, 33);
+  --colorTables: rgb(90, 92, 102);
+  --papers: rgb(59, 61, 68);
 }
 
-.rows{
+
+html{
+  background-color: var(--background);
+}
+
+
+body{
+  color:var(--secondary);
+}
+
+.rows {
   border: dotted 2px var(--primary);
   animation: glow 8s infinite;
+  background-color: var(--background)
+  
 }
 @keyframes glow {
-  0%{}
-  50%{border: dotted 2px var(--secondary);}
-  100%{}
+  0% {
+  }
+  50% {
+    border: dotted 2px var(--background);
+  }
+  100% {
+  }
 }
 
-.columns{
+.columns {
   border: solid 2px lightskyblue;
   animation: glow2 4s infinite;
+  box-shadow: 3px 2px 5px    var(--secondary);
 }
-@keyframes glow2{
-  0%{}
-  50%{border: solid 2px var(--secondary);}
-  100%{}
+@keyframes glow2 {
+  0% {
+  }
+  50% {
+    border: solid 2px var(--background);
+    box-shadow: 0  var(--secondary);
+  }
+  100% {
+  }
 }
 
-
-.presentation{
+.presentation {
   display: flex;
   justify-content: center;
   text-align: center;
   margin-top: 5px;
 }
 
-.figure{
- margin:40px;
+.figure {
+  margin: 40px;
 }
 
-
-.image{
+.image {
+  margin-top: 40px;
   border-style: dotted;
-  border-color: rgb(239, 254, 249);
+  border-color: rgb(72, 46, 84);
   box-shadow: 4px 2px 4px 2px rgba(0, 0, 0, 0.2);
-  
 }
 
+.language {
+  display: flex;
+  position: absolute;
+  margin-top: 15px;
+}
+.spanish, .english{
+  border-radius: 7px;
+  box-shadow: 3px 2px 5px rgb(71, 69, 69);
+  margin-right: 5px;
+  width: 70px;
+}
+.spanish{
+  background-color: rgb(181, 46, 46);
+  color: rgb(194, 194, 95);
+  border-color: rgb(108, 32, 32);
+}
+.spanish:hover {
+  background-color:rgb(108, 32, 32);
+}
+.english{
+  background-color:  rgb(66, 46, 181);
+  color: rgb(243, 225, 225);
+  border-color: rgb(40, 19, 82);
+}
+.english:hover{
+  background-color: rgb(40, 19, 82);
+}
 
-.nav{
+.nav {
   display: flex;
   justify-content: center;
   margin-top: 15px;
 }
 
-
-
-.navItem{
+.navItem {
   background-color: var(--primary);
   margin: 2px;
   box-shadow: 3px 2px 5px gray;
 }
-.navItem a{
+.navItem a {
   text-decoration: none;
   color: var(--secondary);
 }
-.navItem:hover{
+.navItem a:hover {
+  text-decoration: none;
+  color: var(--secondary);  
+}
+.navItem:hover {
   animation: grow 1s;
 }
 @keyframes grow {
-  0%{}
-  50%{}
-  100%{background-color:var(--secondary);
-       transform: scale(110%);}
+  0% {
+  }
+  50% {
+  }
+  100% {
+    background-color: rgb(107, 72, 141);
+    transform: scale(110%);
+  }
 }
 
-.textoBoton{
+.textoBoton {
   color: var(--secondary);
 }
-.textoBoton:hover{
+.textoBoton:hover {
   color: var(--secondary);
 }
 
-
-.descarga{
+.descarga {
   display: flex;
   justify-content: center;
   margin-top: 100px;
@@ -91,23 +143,28 @@ body{
   animation: descargaAnimada 5s infinite;
 }
 
-.descarga a{
+.descarga a {
   text-decoration: none;
 }
 
 @keyframes descargaAnimada {
-  0%{transform: scale(100%)}
-  50%{transform: scale(90%)}
-  100%{transform: scale(100%);}
-
+  0% {
+    transform: scale(100%);
+  }
+  50% {
+    transform: scale(90%);
+  }
+  100% {
+    transform: scale(100%);
+  }
 }
 
-.title{
+.title {
   background-color: var(--primary);
   width: auto;
   color: var(--secondary);
-  height: 100px;  
-  margin-top: 10px; 
+  height: 100px;
+  margin-top: 10px;
   text-align: center;
   padding-top: 25px;
   margin-bottom: 30px;
@@ -115,24 +172,27 @@ body{
   animation: title 2.5s infinite;
 }
 @keyframes title {
-  0%{}
-  50%{background-color:rgb(63, 92, 137);}
-  100%{}
-
+  0% {
+  }
+  50% {
+    background-color: rgb(63, 92, 137);
+  }
+  100% {
+  }
 }
 
-.title + h2{
+.title + h2 {
   margin-left: 20px;
   color: var(--primary);
 }
 
-.lista1{
-  float:left;
+.lista1 {
+  float: left;
   display: inline;
   list-style: none;
 }
 
-.itemLista{
+.itemLista {
   display: flex;
   width: 80px;
   height: 80px;
@@ -150,93 +210,129 @@ ul {
   margin-left: 30px;
 }
 
+.custom-paper {
+  background-color: var(--papers);
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 2px 2px 8px rgba(218, 208, 208, 0.325);
+}
+
+
+
 @keyframes logos {
-  0%{}
-  50%{transform: translateY(-10px);}
-  100%{}
+  0% {
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+  }
 }
 .knowledges-container {
   text-align: center;
 }
 
-.main{
+.main {
   display: flex;
   flex-direction: column;
 }
 
-.carousel{
+.carousel {
   margin-top: 20px;
   justify-self: center;
   align-self: center;
 }
 
-.card-carousel{
+.card-carousel {
   display: flex;
   background-color: var(--primary);
   height: 52vw;
   width: 70vw;
   justify-items: center;
-  float:left;
+  float: left;
+  margin-right: 15px;
+  box-shadow: inset 7px 7px 5px rgb(107, 72, 141);
 }
 
-.text p{
- font-size: 2vw; 
- margin: 0;
+.text p {
+  font-size: 2vw;
+  margin: 0;
 }
-.text h3{
-  font-size: 5vw; 
-}
-
-
-.carousel-caption{
-  bottom:0px;
+.text h3 {
+  font-size: 5vw;
 }
 
-.repositories{
+.carousel-caption {
+  bottom: 0px;
+}
+
+.repositories {
   margin-top: 40px;
-  
 }
 
-.table{
+
+.table {
   margin-top: 50px;
-  background-color: var(--secondary);
-
+  background-color: var(--colorTables);
 }
-.table tr{
-  text-align: center  ;
+.table tr {
+  text-align: center;
   font-size: 2vw;
   margin-top: 20px;
+  border-color: var(--primary);
+  box-shadow: 4px 2px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
-tr p{
+tr p {
   margin-top: 40px;
   font-size: 2.5vw;
-  font-weight:bold;
+  font-weight: bold;
+  color: var(--secondary);
+  
+}
+tr a{
+  text-decoration: none;
+  color: var(--secondary);
+}
+tr a:hover{
+  text-decoration: none;
+  color: var(--primary);
 }
 
-.circulo{
-    background: var(--primary);
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    margin-right: 15px;
-    box-shadow: 3px 2px 5px gray;
+.circulo {
+  background: var(--primary);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  box-shadow: 3px 2px 5px gray;
 }
 
 
 
 @media only screen and (min-width: 1000px) {
-  .text p{
+  .text p {
     margin-top: 20px;
-   }
+  }
 }
 @media only screen and (max-width: 999px) and (min-width: 650px) {
-  .text p{
+  .text p {
     margin-top: 10px;
-   }
+  }
 }
-@media only screen and (max-width: 281px){ /*galaxy fold*/
-  .text p{
+@media only screen and (max-width: 281px) {
+  /*galaxy fold*/
+  .text p {
     margin-top: -1px;
-   }
+  }
 }
+
+@media only screen and (max-width: 490px) {
+  .spanish, .english{
+    width: 55px;
+    font-size: 12px;
+  }
+}
+
